@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*小屏样式0-768*/
+/*媒体查询 media query,查询浏览器的宽度*/
+@media only screen and (min-width:0px) and (max-width:768px) {
+	body {
+		background-color: red;
+	}
+	.sm-12 {
+		width: 100%;
+	}
+}
+/*大屏样式 大于768*/
+@media only screen and (min-width:768px) {
+	body {
+		background-color: green;
+	}
+	.lg-6 {
+		width: 50%
+	}
+}
+div{
+float:left;
+}
+</style>
+</head>
+<body>
+<div class="sm-12 lg-6">div1</div>
+<div class="sm-12 lg-6">div2</div>
+</body>
+</html>

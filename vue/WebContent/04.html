@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<button onClick="insert">insert</button>
+<div id="app">
+
+</div>
+<script type="text/javascript">
+function Vue(options){
+	var rootId=options.el;
+	var rootObject=docment.getElementById(rootId);
+	function run(){
+		
+		rootObject.innerHTML="";
+		var items=options.data.items;
+		for(var i=0;i<items.length;i++){
+			rootObject.innerHTML= 
+				rootObject.innerHTML
+				+items[i].title+"</br>";
+		}
+		
+	}
+	window.setInterval(run,100);
+}
+
+//程序媛
+var options={
+		el:"app",
+		data:{
+			items:{
+				{title:"item1"},
+				{title:"item2"}
+			}
+		}
+}
+var vue = new Vue(options);
+
+function insert(){
+	var item = {title:"新商品"};
+	var length=items.length;
+	items[length]=item;
+	
+}
+</script>
+
+</body>
+</html>

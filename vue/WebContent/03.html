@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+定义架构
+function Vue(options){
+	var fun = options.mounted;
+	window.onload=fun;
+}
+var options={
+		
+		mounted:function(){
+			console.log("mounted制定的函数允运行了")
+		}
+}
+var vue = new Vue(options);
+</script>
+</body>
+
+</html>
